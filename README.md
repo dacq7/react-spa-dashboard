@@ -28,3 +28,17 @@ A professional Single Page Application built with React, following clean archite
 ---
 
 ## 📂 Project Structure
+
+src/
+├─ components/
+│ └─ Navbar.jsx
+├─ context/
+│ └─ UserContext.jsx
+├─ hooks/
+│ └─ useUsers.js
+├─ pages/
+│ ├─ Home.jsx
+│ ├─ Dashboard.jsx
+│ └─ UserDetail.jsx
+├─ App.jsx
+└─ main.jsx
