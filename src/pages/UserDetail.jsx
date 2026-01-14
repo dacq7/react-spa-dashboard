@@ -1,5 +1,25 @@
-function UserDetail() {
-    return <h2>User Detail</h2>
-}
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-export default UserDetail
+const UserDetail = () => {
+  const { id } = useParams();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then(res => res.json())
+      .then(data => setUser(data));
+  }, [id]);
+
+  if (!user) return <p>Loading user...</p>;
+
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+      <p>City: {user.address.city}</p>
+    </div>
+  );
+};
+
+export default UserDetail;
