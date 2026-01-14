@@ -42,3 +42,17 @@ src/
 │ └─ UserDetail.jsx
 ├─ App.jsx
 └─ main.jsx
+
+🌐 API
+
+Data provided by:
+
+https://jsonplaceholder.typicode.com/
+
+🎯 Purpose
+
+This project was built as part of a professional React learning process, focusing on real-world architecture and development practices.
+
+👨‍💻 Author
+
+Diego Alejandro Correa Quiroz
