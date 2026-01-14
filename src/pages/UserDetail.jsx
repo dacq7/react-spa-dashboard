@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const UserDetail = () => {
@@ -17,9 +17,14 @@ const UserDetail = () => {
     <div>
       <h2>{user.name}</h2>
       <p>Email: {user.email}</p>
-      <p>City: {user.address.city}</p>
+      <p>City: {user.address?.city}</p>
+
+      <Link to="/dashboard">
+        <button>Back to Dashboard</button>
+      </Link>
     </div>
   );
 };
 
 export default UserDetail;
+

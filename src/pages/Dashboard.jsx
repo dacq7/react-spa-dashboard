@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useUsers } from "../hooks/useUsers";
 
 const Dashboard = () => {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(res => res.json())
-      .then(data => {
-        setUsers(data);
-        setLoading(false);
-      });
-  }, []);
+  const { users, loading } = useUsers();
 
   if (loading) return <p>Loading users...</p>;
 
@@ -34,3 +24,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
